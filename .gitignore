@@ -1,7 +1,62 @@
-node_modules
+# Dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Production builds
+dist/
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# OS generated files
 .DS_Store
-dist
-*.local
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# Vite & Slidev
 .vite-inspect
 .remote-assets
 components.d.ts
+
+# Editor specific
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.idea/
+*.swp
+*.swo
+*~
+
+# Local development
+*.local
+
+# Build outputs
+.output
+.nuxt
+.next
+.vercel
+.svelte-kit
+output.css
+
+# Testing
+coverage/
+.nyc_output/
+.gitlab-ci.yml
+*.log
+
+# Sensitive files
+secrets/
+creds/
+tokens/
