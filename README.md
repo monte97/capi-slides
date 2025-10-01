@@ -35,6 +35,18 @@ Questo progetto include un Makefile con comandi convenienti per lo sviluppo:
 
 L'utilizzo di questi comandi fornisce un'interfaccia coerente indipendentemente dal gestore di pacchetti utilizzato.
 
+## Configurazione Demo
+
+La demo include una serie di file di configurazione per Cluster API, ognuno con uno scopo specifico:
+
+- `cluster.yaml` - Definisce il cluster Kubernetes e collega i riferimenti al control plane e all'infrastruttura
+- `infrastructure.yaml` - Configura l'infrastruttura Docker per il cluster (DockerCluster)
+- `control-plane-machine-template.yaml` - Definisce il template per le macchine del control plane (DockerMachineTemplate)
+- `control-plane-config.yaml` - Configura il control plane usando Talos (TalosControlPlane)
+- `worker-deployment.yaml` - Definisce il deployment dei nodi worker (MachineDeployment) 
+- `worker-machine-template.yaml` - Definisce il template per le macchine dei worker (DockerMachineTemplate)
+- `worker-config-template.yaml` - Configura i nodi worker usando Talos (TalosConfigTemplate)
+
 ## Documentazione Slidev
 
 Per ulteriori informazioni su Slidev visita la [documentazione ufficiale](https://sli.dev/).
