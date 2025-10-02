@@ -1,6 +1,16 @@
 # Demo: Cluster API (CAPI) con Infrastructure Provider Docker (CAPD) 🐳
 
-Questa demo illustra il deployment di un cluster Kubernetes (*workload cluster*) utilizzando **Cluster API (CAPI)** e l'**Infrastructure Provider Docker (CAPD)**. Questo setup è **autonomo** (non ha dipendenze da cloud esterni o provider on-prem) e ideale per **scopi dimostrativi e di testing**.
+[**Cluster API (CAPI)**](https://cluster-api.sigs.k8s.io/) è un progetto di Kubernetes che permette di **gestire l'intero ciclo di vita dei cluster Kubernetes** (creazione, aggiornamento, scaling ed eliminazione) utilizzando le **API native di Kubernetes**.
+
+## Concetti Chiave
+
+1.  **Management Cluster (Cluster di Gestione):** Un cluster (in questa demo creato con **Kind**) che ospita i **controller** di CAPI.
+2.  **Workload Cluster (Cluster di Lavoro):** Il cluster Kubernetes effettivo che viene creato e gestito da CAPI.
+3.  **Provider di Infrastruttura (es. Docker/CAPD):** Componenti che CAPI utilizza per interagire con l'infrastruttura sottostante (container Docker, in questo caso) e creare i nodi macchina.
+
+In breve, CAPI estende il potere di **Kubernetes** per gestire l'infrastruttura stessa, trasformando la gestione dei cluster in un processo **dichiarativo e automatizzato**.
+
+Questa demo illustra il deployment di un cluster Kubernetes (*workload cluster*) utilizzando **Cluster API (CAPI)** e l'**Infrastructure Provider Docker (CAPD)**.
 
 ⚠️ **ATTENZIONE:** Questo setup non è inteso per l'uso in ambienti di produzione.
 
